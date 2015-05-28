@@ -13,12 +13,11 @@ using namespace::std;
 
 void prog1()
 {
-  string str;
-  string strTemp; // для хранения первой буквы
+  string str; // слово
   ifstream ifs;
   ofstream ofs;
   int k=0;
-  ifs.open("text1.txt", ios::in);
+  ifs.open("text2.txt");
   if (ifs)
   {
     cout << "### Текст из файла ###\n\n";
@@ -26,21 +25,20 @@ void prog1()
       {
           getline(ifs, word[k]); // считываем строки в переменные
           cout << word[k] << endl; // текст из файла
-          k++; // новое слово
+          k++; // новая строка
       }
   ifs.close(); // закрываем файл
   }
   else
       cout << "ой все!"; // ну если вдруг не открылся
 
-  cout << "\nВведите символ >> "; cin >> str; cout << endl;
 
-  for (int z=0; z<=k; z++)
+  cout << "\nВведите слово >> "; cin >> str; cout << endl;
+
+  for (int z=0; z<=k; z++) // перебор строк
   {
-      if (str!=word[z].substr(0,1)) // если первая буква строки не наш введенный символ
-       {
-           word[z]=""; // обнуляем ее
-       }
+      if (word[z].find(str)!=-1)
+        word[z]="";
 
        if (word[z]!="")
         cout << word[z] << endl; // выводим список оставшихся строк
@@ -61,8 +59,8 @@ void prog2()
 {
   ifstream ifs; // для чтения
   ofstream ofs; // для записи
-  string symb; // cимвол на замену
-  int k=0, z=0, o=0;
+
+  int k=0, z=0, leng=0;
 
   ifs.open("text2.txt");
   if (ifs)
@@ -79,16 +77,21 @@ void prog2()
   else
       cout << "ой все!"; // ну если вдруг не открылся
 
-  cout << "\nВведите символ на замену >> "; cin >> symb;
-
 ofs.open("text2_out.txt"); // откроем файл для записи
   for (z=0; z<=k; z++) // переберем все слова
   {
-    o=word[z].length(); // узнаем длинну слова
-    for (int i=0; i<o; i++)
-    {
-      ofs << symb;  // запись в файл
-    }
+    leng = word[z].length();
+    leng--;
+    for (int i=0; i<leng; i++) // перебираем все буквы
+      if (word[z].at(i+1) == word[z].at(i)) // если i и i+1 символы в слове равны, то
+      {
+//        cout << word[z].at(i+1) << "==" << word[z].at(i) << endl;
+        word[z].at(i)=' ';
+      }
+ //     else
+ //       cout << word[z].at(i+1) << "!=" << word[z].at(i) << endl;
+
+    ofs << word[z];  // запись в файл
     ofs << " "; // пробел после каждого слова
   }
 ofs.close(); // закроем файл
@@ -101,8 +104,8 @@ int main()
   setlocale(LC_ALL, "Rus");    // Подключение русского языка
 
   cout << "Выберите программу: " << endl;
-  cout << "1. Удалить строки, в которых заданный символ не первый." << endl;
-  cout << "2. Заменить все символы файла, заданным символом.\n\n";
+  cout << "1. Исключить строки, содержащее заданное слово." << endl;
+  cout << "2. Во всех парах одинаковых символов второй символ заменить на пробел.\n\n";
 
 cin >> a;
 

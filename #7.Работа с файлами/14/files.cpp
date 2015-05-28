@@ -4,11 +4,18 @@ using namespace::std;
 #include <string>
 #include <Windows.h> // для работы SetConsoleCP, SetConsoleOutputCP
 
+// prog1() -> оставить строки заканчивающиеся заданным словом
+// prog2()
+
+
+
+
   string line, temp; // переменные для обработки строк
   string text; // для хранения текста из файла
   byte a; // для выбора программы
   int i=2048;
   string *word = new string[i];
+  string *lastWord = new string[i];
 
 
 void prog1()
@@ -17,7 +24,7 @@ void prog1()
   string strTemp; // для хранения первой буквы
   ifstream ifs;
   ofstream ofs;
-  int k=0;
+  int k=0, n=0;
   ifs.open("text1.txt", ios::in);
   if (ifs)
   {
@@ -26,31 +33,31 @@ void prog1()
       {
           getline(ifs, word[k]); // считываем строки в переменные
           cout << word[k] << endl; // текст из файла
-          k++; // новое слово
+          k++; // новая строка
       }
   ifs.close(); // закрываем файл
   }
   else
-      cout << "ой все!"; // ну если вдруг не открылся
+      cout << "ой все!"; // ну если вдруг файл потерялся
 
-  cout << "\nВведите символ >> "; cin >> str; cout << endl;
+  cout << "\nВведите слово >> "; cin >> str; cout << endl;
 
   for (int z=0; z<=k; z++)
   {
-      if (str!=word[z].substr(0,1)) // если первая буква строки не наш введенный символ
-       {
-           word[z]=""; // обнуляем ее
-       }
-
-       if (word[z]!="")
-        cout << word[z] << endl; // выводим список оставшихся строк
+  		n=word[z].rfind(' '); // номер последнего пробела
+  		//cout << n << endl;
+  			if (n!=-1) // если пробел был найден
+			{
+  				lastWord[z]=word[z].substr(n+1); // вырезаем последнее слово каждой строки
+  				if (lastWord[z]==str)
+  					cout << word[z] << endl;
+  			}
   }
 
   ofs.open("text1_out.txt"); // открываем файл для записи
-
     for (int z=0; z<=k; z++)
     {
-      if (word[z]!="")
+      if (lastWord[z]==str)
         ofs << word[z];
         ofs << endl;
     }
@@ -62,7 +69,7 @@ void prog2()
   ifstream ifs; // для чтения
   ofstream ofs; // для записи
   string symb; // cимвол на замену
-  int k=0, z=0, o=0;
+  int k=0, z=0;
 
   ifs.open("text2.txt");
   if (ifs)
@@ -84,11 +91,12 @@ void prog2()
 ofs.open("text2_out.txt"); // откроем файл для записи
   for (z=0; z<=k; z++) // переберем все слова
   {
-    o=word[z].length(); // узнаем длинну слова
-    for (int i=0; i<o; i++)
+    for (int i=0; i<word[z].length(); i++) // перебираем все буквы
     {
-      ofs << symb;  // запись в файл
+    	if (word[z].at(i) >= '0' && word[z].at(i) <= '9') // если цифра
+    		word[z].at(i)=symb;
     }
+    ofs << word[z];  // запись в файл
     ofs << " "; // пробел после каждого слова
   }
 ofs.close(); // закроем файл
@@ -101,8 +109,8 @@ int main()
   setlocale(LC_ALL, "Rus");    // Подключение русского языка
 
   cout << "Выберите программу: " << endl;
-  cout << "1. Удалить строки, в которых заданный символ не первый." << endl;
-  cout << "2. Заменить все символы файла, заданным символом.\n\n";
+  cout << "1. Oставить строки заканчивающиеся заданным словом" << endl;
+  cout << "2. Заменить все цифры файла, заданным символом.\n\n";
 
 cin >> a;
 

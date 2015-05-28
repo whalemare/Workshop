@@ -52,6 +52,7 @@ void prog1()
     {
       if (word[z]!="")
         ofs << word[z];
+        ofs << endl;
     }
   ofs.close(); // Закрываем файл
 }
