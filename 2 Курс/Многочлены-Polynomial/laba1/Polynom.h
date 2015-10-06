@@ -9,7 +9,8 @@ private:
 	int St;
 	int* Kf;
 	int degree; // степень многочлена
-	int *coefficient = new int[degree + 1]; // массив с коэффициентами многочлена
+	int *coefficient = new int[degree]; // массив с коэффициентами многочлена
+	float x1, x2; // корни многочлена
 
 public:
 	Polynom(); // Конструктор
@@ -25,6 +26,11 @@ public:
 
 	//Getters
 	int getDegree(); // Возвращает степень многочлена
+
+	float getX1();	// Возвращает 1 корень уравнения 
+	float getX2();	// Возвращает 2 корень уравнения 
+
+	void answering(); // Решает уравнение и возвращает его ответ
 };
 
 }
