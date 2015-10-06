@@ -66,14 +66,29 @@ namespace Program
 
 	void Polynom::answering() // решает уравнение
 	{
+		if (degree > 2)
+		{
+			cout << "К сожалению, программа пока не умеет\n считать корни многочленов выше 2 степени.\n";
+		}
+
 		if (degree == 2)
 		{
 			int a = coefficient[2], b = coefficient[1], c = coefficient[0];
 			int D = (b*b)-(4*a*c);
-			float x1 = (float)(((b - 2 * b) + D) / (2 * a));
-			float x2 = (float)(((b - 2 * b) - D) / (2 * a));
+			float x1 = (float)(((-b) + D) / (2 * a));
+			float x2 = (float)(((-b) - D) / (2 * a));
 			Polynom::x1 = x1;
 			Polynom::x2 = x2;
+			cout << "x1 = " << getX1() << endl;
+			cout << "x2 = " << getX2() << endl;
+		}
+
+		if (degree == 1)
+		{
+			float x1 = coefficient[1];
+			x1 = (-coefficient[0]) / x1;
+			Polynom::x1 = x1;
+			cout << "x1 = " << getX1() << endl;
 		}
 	}
 }

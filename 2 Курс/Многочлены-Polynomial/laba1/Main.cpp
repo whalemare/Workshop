@@ -21,8 +21,6 @@ int main()
 	polynom.printPolynom(); // Распечатаем наш  многочлен
 
 	polynom.answering();
-	cout << "x1 = " << polynom.getX1() << endl;
-	cout << "x2 = " << polynom.getX2() << endl;
 
 	system("pause");
 	return 0;
