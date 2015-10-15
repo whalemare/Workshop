@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include "Polynom.h"
 using namespace std;
 
@@ -11,7 +11,7 @@ namespace Program
 	void Polynom::setDegree(int degree)
 	{
 		if (degree == 0) {
-			cout << "–Â¯ÂÌËÂÏ ‚‡¯Â„Ó Û‡‚ÌÂÌËˇ ˇ‚ÎˇÂÚÒˇ: " << degree << " = " << degree << endl;
+			cout << "–†–µ—à–µ–Ω–∏–µ–º –≤–∞—à–µ–≥–æ —É—Ä–∞–≤–Ω–µ–Ω–∏—è —è–≤–ª—è–µ—Ç—Å—è: " << degree << " = " << degree << endl;
 			exit;
 		}
 		else
@@ -20,7 +20,7 @@ namespace Program
 
 	void Polynom::setCoefficient()
 	{
-		for (int i = degree; i >= 0; i--) // Á‡ÔÓÒËÏ ‚ÒÂ ÍÓ˝ÙÙËˆËÂÌÚ˚ Ì‡ ‚‚Ó‰
+		for (int i = degree; i >= 0; i--) // –∑–∞–ø—Ä–æ—Å–∏–º –≤—Å–µ –∫–æ—ç—Ñ—Ñ–∏—Ü–∏–µ–Ω—Ç—ã –Ω–∞ –≤–≤–æ–¥
 		{
 			cout << "x^" << i << " >> ";
 			cin >> coefficient[i];
@@ -30,7 +30,7 @@ namespace Program
 
 	void Polynom::printPolynom()
 	{
-		cout << "¬‡¯ ÏÌÓ„Ó˜ÎÂÌ: \n\n";
+		cout << "–í–∞—à –º–Ω–æ–≥–æ—á–ª–µ–Ω: \n\n";
 		for (int i = degree; i >= 0; i--)
 		{
 			if (coefficient[i] != 0)
@@ -64,11 +64,11 @@ namespace Program
 		return Polynom::x2;
 	}
 
-	void Polynom::answering() // Â¯‡ÂÚ Û‡‚ÌÂÌËÂ
+	void Polynom::answering() // —Ä–µ—à–∞–µ—Ç —É—Ä–∞–≤–Ω–µ–Ω–∏–µ
 	{
 		if (degree > 2)
 		{
-			cout << "  ÒÓÊ‡ÎÂÌË˛, ÔÓ„‡ÏÏ‡ ÔÓÍ‡ ÌÂ ÛÏÂÂÚ\n Ò˜ËÚ‡Ú¸ ÍÓÌË ÏÌÓ„Ó˜ÎÂÌÓ‚ ‚˚¯Â 2 ÒÚÂÔÂÌË.\n";
+			cout << "–ö —Å–æ–∂–∞–ª–µ–Ω–∏—é, –ø—Ä–æ–≥—Ä–∞–º–º–∞ –ø–æ–∫–∞ –Ω–µ —É–º–µ–µ—Ç\n —Å—á–∏—Ç–∞—Ç—å –∫–æ—Ä–Ω–∏ –º–Ω–æ–≥–æ—á–ª–µ–Ω–æ–≤ –≤—ã—à–µ 2 —Å—Ç–µ–ø–µ–Ω–∏.\n";
 		}
 
 		if (degree == 2)

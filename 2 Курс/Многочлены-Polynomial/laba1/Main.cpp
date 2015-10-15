@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "Polynom.h"
 using namespace std;
 using Program::Polynom;
@@ -9,16 +9,16 @@ int main()
 
 	setlocale(LC_ALL, "Russian");
 
-	int degree; // степень многочлена
-	cout << "Введите порядок многочлена: ";
+	int degree; // СЃС‚РµРїРµРЅСЊ РјРЅРѕРіРѕС‡Р»РµРЅР°
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕСЂСЏРґРѕРє РјРЅРѕРіРѕС‡Р»РµРЅР°: ";
 	cin >> degree;
 	polynom.setDegree(degree);
 	
-	cout << "Введите коэффициенты: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹: " << endl;
 	polynom.setCoefficient();
 	
 	system("cls");
-	polynom.printPolynom(); // Распечатаем наш  многочлен
+	polynom.printPolynom(); // Р Р°СЃРїРµС‡Р°С‚Р°РµРј РЅР°С€  РјРЅРѕРіРѕС‡Р»РµРЅ
 
 	polynom.answering();
 
