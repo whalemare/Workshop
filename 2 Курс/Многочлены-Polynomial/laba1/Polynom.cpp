@@ -1,12 +1,80 @@
 ﻿#include <iostream>
+#include <ostream>
 #include "Polynom.h"
 using namespace std;
+using std::ostream;
 
 namespace Program
 {
 	Polynom::Polynom() {}
 
 	Polynom::~Polynom() {}
+
+	Polynom Polynom::operator++()
+	{
+		Polynom temp;
+
+		for (int i = degree; i >= 0; i--)
+		{
+			coefficient[i]++;
+			temp.coefficient[i] = coefficient[i];
+		}
+		return temp;
+	}
+
+	Polynom Polynom::operator--()
+	{
+		Polynom temp;
+
+		for (int i = degree; i >= 0; i--)
+		{
+			coefficient[i]--;
+			temp.coefficient[i] = coefficient[i];
+		}
+		return temp;
+	}
+
+	Polynom Polynom::operator+(Polynom P)
+	{
+		Polynom result;
+		for (int i = degree; i >= 0; i--)
+		{
+			result.coefficient[i] = coefficient[i] + P.coefficient[i];
+			// и одновременная распечатка многочлена
+			cout << result.coefficient[i] << "x^" << i;
+			if (i != 0)
+				cout << " + ";
+			else
+				cout << " = 0";
+		}
+		cout << endl << endl;
+		return result;
+	}
+
+	Polynom Polynom::operator-(Polynom P)
+	{
+		Polynom result;
+		for (int i = degree; i >= 0; i--)
+		{
+			result.coefficient[i] = coefficient[i] - P.coefficient[i];
+			// и одновременная распечатка многочлена
+			cout << result.coefficient[i] << "x^" << i;
+			if (i != 0)
+				cout << " + ";
+			else
+				cout << " = 0";
+		}
+		cout << endl << endl;
+		return result;
+	}
+
+	Polynom Polynom::operator=(Polynom P)
+	{
+		for (int i = degree; i >= 0; i--)
+			coefficient[i] = P.coefficient[i];
+
+		return *this;
+	}
 
 	void Polynom::setDegree(int degree)
 	{
@@ -33,14 +101,7 @@ namespace Program
 		cout << "Ваш многочлен: \n\n";
 		for (int i = degree; i >= 0; i--)
 		{
-			if (coefficient[i] != 0)
-				if (i == 1)
-					cout << coefficient[i] << "x";
-				else
-					if (i == 0)
-						cout << coefficient[i];
-					else
-						cout << coefficient[i] << "x^" << i;
+			cout << coefficient[i] << "x^" << i;
 			if (i != 0)
 				cout << " + ";
 			else
@@ -91,4 +152,26 @@ namespace Program
 			cout << "x1 = " << getX1() << endl;
 		}
 	}
+
+	std::ostream & operator << (std::ostream &stream, Polynom &P)
+	{
+		stream << "Ваш многочлен:\n\n";
+		for (int i = P.getDegree(); i >= 0; i--)
+		{
+			stream << P.coefficient[i] << "x^" << i;
+			if (i != 0)
+				stream << " + ";
+			else
+				stream << " = 0";
+		}
+
+		return stream;
+	}
+
+	std::istream & operator >> (std::istream &stream, Polynom &P)
+	{
+		P.setCoefficient();
+		return stream;
+	}
+
 }

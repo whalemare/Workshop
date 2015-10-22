@@ -17,6 +17,19 @@ public:
 
 	~Polynom(); // Деструктор
 
+	Polynom operator++(); // Унарное сложение -> перегрузка оператора
+	
+	Polynom operator--(); // Унарное вычитание
+
+	Polynom operator+(Polynom); // Бинарное сложение
+
+	Polynom operator-(Polynom); // Бинарное вычитание
+
+	Polynom operator=(Polynom); 
+
+	friend std::ostream &operator << (std::ostream&, Polynom&); // перегрузка оператора вывода
+	friend std::istream &operator >> (std::istream&, Polynom&); // перегрузка оператоа ввода
+
 	//Setters
 	void setDegree(int degree); // Устанавливает степень многочлена
 
