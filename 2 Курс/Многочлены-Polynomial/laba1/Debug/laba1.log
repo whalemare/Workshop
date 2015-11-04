@@ -1,11 +1,11 @@
-﻿Build started 06.10.2015 12:11:59.
+﻿Build started 22.10.2015 9:03:51.
      1>Project "C:\Users\nanos\Documents\GitHub\ProgLang.labs\2 Курс\Многочлены-Polynomial\laba1\laba1.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (laba1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          D:\Data\Visual Studio Enterprise 2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Polynom.cpp
          Polynom.cpp
-     1>c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(15): warning C4551: function call missing argument list
-     1>c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(88): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(83): warning C4551: function call missing argument list
+     1>c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(149): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
          Main.cpp
          Generating Code...
        Link:
@@ -16,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.54
+Time Elapsed 00:00:01.44
