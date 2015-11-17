@@ -5,6 +5,7 @@
 #include <stdlib.h> // дл€ system("pause");
 #include <locale.h> // дл€ русской консоли
 #include <stdio.h>
+#include "List.h"
 #include <iostream>
 #include <fstream> // дл€ файла
 using namespace std;
@@ -95,16 +96,6 @@ int main() {
 		ifs >> newMas;
 	system("pause");
 	cout << endl << endl << (newMas=x2);
-	/*
-	cout << "Ћабораторна€ є4\n" << endl;
-	int n; // размер массива
-	cout << "—оздаем циклический массив размером >> "; cin >> n;
-	CycleMass cycleMass(4);
-	int k; // кол-во вводимыъ элементов
-	cout << "Ёлементов на ввод >> "; cin >> k;
-	cycleMass.add(k);
-	*/
-
 
 	cout << "Ћабораторна€ работа є4\n";
 	int sizeMassiv;
@@ -131,6 +122,47 @@ int main() {
 
 	cout << "¬с€ очередь списком: \n";
 	revetMass.print();
+
+	*/
+
+cout << "Ћабораторна€ работа є5\n\n";
+
+List list; // объ€вили объект список;
+int n; // размер массива
+int k; // число массивов
+
+cout << "¬ведите количество вводимых массивов: ";
+cin >> k;
+
+cout << "¬ведите размеры массивов: ";
+cin >> n;
+Mass massiv(n); // создаем объект массив
+
+for (int i = 0; i < k; i++)
+{
+	cin >> massiv; // вводим элементы массива
+	list.add(massiv); // заносим их в список
+}
+
+cout << endl;
+list.show(); // выводим наш список элементов
+
+
+	cout << "¬ведите номер элемента который нужно извлечь: \n";
+	cin >> n; cout << endl;
+	list.pop(n);
+	cout << endl;
+
+
+//	cout << "¬ведите номер элемента который нужно удалить: \n";
+//	cin >> n;
+
+	cout << endl;
+	list.clear();
+	cout << "”далили список\n";
+	list.show();
+
+
 
 	system("pause");
 	return 0;

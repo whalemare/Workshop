@@ -5,10 +5,11 @@
 using namespace std;
 
 class Mass {
-private:
+public:
 	int *buf; // указатель на элемент массива
 	int sz; // размер массива
-public:
+	Mass *Next; // указатель на следующий элемент
+
 	Mass(); // конструктор по умолчанию
 	Mass(int); // конструктор с параметром
 	Mass(Mass &); // конструкто копирования

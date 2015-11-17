@@ -28,7 +28,7 @@ Mass::Mass(Mass &a) { //конструктор копирования.
 }
 
 Mass::~Mass() {
-	delete buf; // очищаем память
+//	delete buf; // очищаем память
 }
 
 istream& operator>>(istream &in, Mass &a) {
