@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Revert.h"
 
 
@@ -16,7 +16,7 @@ void Revert::entered(int size)
 	int number;
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Ââåäèòå ýëåìåíò " << i << endl; 
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ " << i << endl; 
 		cin >> number;
 		queque.push(number);
 	}
@@ -37,7 +37,7 @@ void Revert::print()
 	int i = 0;
 	while (!queque.empty())
 	{
-		cout << "Íîìåð â î÷åðåäè " << i << " -> ";
+		cout << "ÐÐ¾Ð¼ÐµÑ€ Ð² Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸ " << i << " -> ";
 		cout << queque.front();
 		cout << endl;
 		queque.pop();

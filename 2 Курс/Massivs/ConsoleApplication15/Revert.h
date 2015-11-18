@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "Mass.h"
-#include <queue>  // подключаем заголовочный файл очереди
+#include <queue>  // РїРѕРґРєР»СЋС‡Р°РµРј Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ С„Р°Р№Р» РѕС‡РµСЂРµРґРё
 
 class Revert
 {
@@ -21,6 +21,6 @@ public:
 
 	void print();
 
-	Revert(int); // инициализация
+	Revert(int); // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
 };
 

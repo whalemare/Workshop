@@ -1,4 +1,4 @@
-#include "stdafx.h"
+п»ї#include "stdafx.h"
 #include "Cycle.h"
 
 
@@ -18,7 +18,7 @@ Cycle::Cycle(int a)
 	size = a;
 }
 
-void Cycle::add(int add) // add = кол-во добавляемых элементов
+void Cycle::add(int add) // add = РєРѕР»-РІРѕ РґРѕР±Р°РІР»СЏРµРјС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 {
 	int number;
 	for (int i = 0; i < add; i++)
@@ -28,7 +28,7 @@ void Cycle::add(int add) // add = кол-во добавляемых элементов
 			add = add - size;
 			i = 0;
 		}
-		cout << "Вы вводите элемент под номером " << i << endl;
+		cout << "Р’С‹ РІРІРѕРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РїРѕРґ РЅРѕРјРµСЂРѕРј " << i << endl;
 		cin >> number;
 		buff[i] = number;
 	}
@@ -36,10 +36,10 @@ void Cycle::add(int add) // add = кол-во добавляемых элементов
 }
 
 ostream& operator<<(ostream &out, const Cycle &a) {
-	if (a.size <= 0) // если массив пуст
-		out << "Массив пуст";
+	if (a.size <= 0) // РµСЃР»Рё РјР°СЃСЃРёРІ РїСѓСЃС‚
+		out << "РњР°СЃСЃРёРІ РїСѓСЃС‚";
 	else
 		for (int i = 0; i < a.size; ++i)
-			out << a.buff[i]; // выводим элементы массива
+			out << a.buff[i]; // РІС‹РІРѕРґРёРј СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°
 	return out;
 }

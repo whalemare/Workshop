@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "Mass.h"
 
 class Cycle : Mass
@@ -10,9 +10,9 @@ public:
 	Cycle();
 	~Cycle();
 
-	Cycle(int); // инициализация 
-	void add(int); // вставка
-	friend ostream &operator<<(ostream&, const Cycle&); //перегруженный оператор для вывода массива
+	Cycle(int); // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ 
+	void add(int); // РІСЃС‚Р°РІРєР°
+	friend ostream &operator<<(ostream&, const Cycle&); //РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РґР»СЏ РІС‹РІРѕРґР° РјР°СЃСЃРёРІР°
 
 };
 
