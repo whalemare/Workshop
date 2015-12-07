@@ -2,7 +2,7 @@
 #include "Mass.h"
 #include <queue>  // подключаем заголовочный файл очереди
 
-class Revert
+class Revert : Mass
 {
 private:
 	int size;
@@ -13,13 +13,13 @@ public:
 	Revert();
 	~Revert();
 
-	void entered(int);
+	void entered(int); // добавить элемент
 
-	int getFront();
+	int getFront(); // взять первый элемент
 
-	int getBack(); // mazafaka
+	int getBack(); // взять последний элемент
 
-	void print();
+	void print(); // распечатать
 
 	Revert(int); // инициализация
 };

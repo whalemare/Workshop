@@ -81,16 +81,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cycle.h" />
-    <ClInclude Include="CycleMass.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Mass.h" />
     <ClInclude Include="Revert.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="templ.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cycle.cpp" />
-    <ClCompile Include="CycleMass.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Massivs.cpp" />
     <ClCompile Include="Mass.cpp" />

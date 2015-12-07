@@ -6,6 +6,7 @@
 using std::ostream;
 using namespace std;
 
+
 Mass::Mass(){sz = 0; buf = new int[0];}
 
 Mass::Mass(int a) { //создает пустой массив с a элементами

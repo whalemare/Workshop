@@ -27,9 +27,6 @@
     <ClInclude Include="Mass.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="CycleMass.h">
-      <Filter>Файлы ресурсов</Filter>
-    </ClInclude>
     <ClInclude Include="Cycle.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -37,6 +34,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="List.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="templ.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
@@ -49,9 +49,6 @@
     </ClCompile>
     <ClCompile Include="Massivs.cpp">
       <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="CycleMass.cpp">
-      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="Cycle.cpp">
       <Filter>Файлы исходного кода</Filter>
