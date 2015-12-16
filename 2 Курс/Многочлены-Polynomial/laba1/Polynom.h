@@ -1,18 +1,21 @@
 ﻿#pragma once
-
-namespace Program
-{
-
+#include <fstream>
+using namespace::std;
 class Polynom
 {
 private:
 	int St;
 	int* Kf;
-	int degree; // степень многочлена
-	int *coefficient = new int[degree]; // массив с коэффициентами многочлена
-	float x1, x2; // корни многочлена
+
 
 public:
+	Polynom *Next; // указатель на следующий элемент
+
+	int degree; // степень многочлена
+
+	float x1, x2; // корни многочлена
+
+	int *coefficient = new int[degree]; // массив с коэффициентами многочлена
 	Polynom(); // Конструктор
 
 	~Polynom(); // Деструктор
@@ -27,8 +30,10 @@ public:
 
 	Polynom operator=(Polynom); 
 
+
 	friend std::ostream &operator << (std::ostream&, Polynom&); // перегрузка оператора вывода
 	friend std::istream &operator >> (std::istream&, Polynom&); // перегрузка оператоа ввода
+	//friend std::ifstream &operator >> (std::ifstream&, Polynom&); // оператор вывода в файл
 
 	//Setters
 	void setDegree(int degree); // Устанавливает степень многочлена
@@ -45,5 +50,3 @@ public:
 
 	void answering(); // Решает уравнение и возвращает его ответ
 };
-
-}

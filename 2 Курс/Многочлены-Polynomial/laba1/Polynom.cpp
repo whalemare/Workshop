@@ -1,11 +1,10 @@
 ﻿#include <iostream>
 #include <ostream>
+#include <fstream>
 #include "Polynom.h"
 using namespace std;
 using std::ostream;
 
-namespace Program
-{
 	Polynom::Polynom() {}
 
 	Polynom::~Polynom() {}
@@ -135,7 +134,7 @@ namespace Program
 		if (degree == 2)
 		{
 			int a = coefficient[2], b = coefficient[1], c = coefficient[0];
-			int D = (b*b)-(4*a*c);
+			int D = (b*b) - (4 * a*c);
 			float x1 = (float)(((-b) + D) / (2 * a));
 			float x2 = (float)(((-b) - D) / (2 * a));
 			Polynom::x1 = x1;
@@ -173,5 +172,18 @@ namespace Program
 		P.setCoefficient();
 		return stream;
 	}
+	/*
+	std::ifstream & operator << (std::ifstream &stream, Polynom &P)
+	{
+		stream << "Ваш многочлен:\n\n";
+		for (int i = P.getDegree(); i >= 0; i--)
+		{
+			stream << P.coefficient[i] << "x^" << i;
+			if (i != 0)
+				stream << " + ";
+			else
+				stream << " = 0";
+		}
 
-}
+		return stream;
+	 } */

@@ -170,8 +170,13 @@ cout << "Лабораторная работа №7: шаблонные клас
 templ<int> ArrayOfInt;
 ArrayOfInt.add(5);
 ArrayOfInt.add(10);
-
+ArrayOfInt.add(100);
+ArrayOfInt.add(1000);
 ArrayOfInt.show();
+
+templ<string> ArrayOfString;
+ArrayOfString.add("hello");
+ArrayOfString.show();
 
 
 	system("pause");

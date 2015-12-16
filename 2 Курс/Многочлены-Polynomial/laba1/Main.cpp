@@ -1,7 +1,9 @@
 ﻿#include <iostream>
+#include <fstream>
 #include "Polynom.h"
+#include "StringP.h"
+#include "List.h"
 using namespace std;
-using Program::Polynom;
 
 int main()
 {
@@ -22,12 +24,18 @@ int main()
 	{
 		cout << "Вы работаете с данным многочленом:\n";
 		cout << polynom; // Распечатаем наш  многочлен
+		//StringP stringP = StringP(polynom);
 		cout << endl << "Выберите необходимое действие:\n";
 		cout << "1. Увеличить все коэффициенты многочлена на 1\n";
 		cout << "2. Уменьшить все коэффициенты многочлена на 1\n";
 		cout << "3. Сложить коэффициенты двух многочленов\n";
 		cout << "4. Вычесть коэффициента двух многочленов\n";
 		cout << "5. Вычислить корни многочлена\n";
+		cout << "6. Запись в файл\n";
+		//cout << "Лабораторная работа #4 - cодержит в себе класс с массивом степеней и класс с отформатированной строкой многочлена\n";
+		//cout << "Нигде не используется за их неудобством\n";
+		cout << "Лабораторная работа №5-----------------------\n";
+		cout << "7. Создать список многочленов\n";
 
 
 		cout << "Введите 0, чтобы выйти из программы.\n\n>> ";
@@ -88,6 +96,59 @@ int main()
 				system("cls");
 				break;
 			}
+			case 6:
+//				printToFile(polynom);
+				cout << "Запись в файл";
+				system("pause");
+				system("cls");
+				break;
+			case 7:
+			{
+				List list;
+				cout << "Введите количество вводимых многочленов >> ";
+				int n;
+				cin >> n;
+				cout << "\nВведите степень многочленов >> ";
+				cin >> degree;
+				polynom.setDegree(degree);
+				system("cls");
+				for (int i = 0; i < n; i++)
+				{
+					cout << "\n Введите " << i << " многочлен\n";
+					cin >> polynom;
+					list.add(polynom);
+					cout << endl;
+				}
+				system("cls");
+				list.show();
+
+				cout << "Введите дополнительный многочлен\n";
+				cin >> polynom; cout << endl;
+				cout << "Выберите место вставки >> ";
+				cin >> n;
+				list.addPos(polynom, n);
+				cout << endl;
+				list.show();
+
+				system("pause");
+				system("cls");
+
+				cout << "Введите номер элемента который нужно извлечь: \n";
+				cin >> n; cout << endl;
+				list.pop(n);
+				cout << endl;
+
+
+				cout << "Введите номер элемента который нужно удалить: \n";
+				cin >> n;
+				list.del(n);
+				cout << endl;
+				list.show();
+				
+				system("pause");
+				system("cls");
+				break;
+			}
 			case 0: 
 			{
 				return 0;
@@ -103,4 +164,26 @@ int main()
 
 	system("pause");
 	return 0;
+}
+
+void printToFile(Polynom polynom)
+{
+	ofstream f;
+	f.open("poly.txt", ios::out); // открываем файл для записи
+	if (!f)
+	{
+		cerr << "Ошибка открытия файла!";
+		system("pause");
+		system("cls");
+	}
+	else
+	{
+		f << polynom; // запишем уравнение в файл
+		f << "Конец.";
+		cout << polynom;
+		cout << "\nЗапись в файл выполнена успешно!";
+		system("pause");
+		system("cls");
+	}
+	f.close();
 }
