@@ -154,7 +154,7 @@ using std::ostream;
 
 	std::ostream & operator << (std::ostream &stream, Polynom &P)
 	{
-		stream << "Ваш многочлен:\n\n";
+		stream << "Ваш многочлен :\n\n";
 		for (int i = P.getDegree(); i >= 0; i--)
 		{
 			stream << P.coefficient[i] << "x^" << i;

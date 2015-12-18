@@ -16,6 +16,7 @@ public:
 	float x1, x2; // корни многочлена
 
 	int *coefficient = new int[degree]; // массив с коэффициентами многочлена
+
 	Polynom(); // Конструктор
 
 	~Polynom(); // Деструктор

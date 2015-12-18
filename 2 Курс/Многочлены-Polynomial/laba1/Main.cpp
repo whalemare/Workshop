@@ -3,8 +3,8 @@
 #include "Polynom.h"
 #include "StringP.h"
 #include "List.h"
+#include <array>
 using namespace std;
-
 int main()
 {
 	Polynom polynom;
@@ -15,7 +15,8 @@ int main()
 	cout << "Введите порядок многочлена: ";
 	cin >> degree;
 	polynom.setDegree(degree);
-	
+
+
 	cout << "Введите коэффициенты: " << endl;
 	cin >> polynom;
 
@@ -24,7 +25,12 @@ int main()
 	{
 		cout << "Вы работаете с данным многочленом:\n";
 		cout << polynom; // Распечатаем наш  многочлен
+		//cout << "Оп.\n";
+
+		//4 лаба
 		//StringP stringP = StringP(polynom);
+		//stringP.show(stringP);
+
 		cout << endl << "Выберите необходимое действие:\n";
 		cout << "1. Увеличить все коэффициенты многочлена на 1\n";
 		cout << "2. Уменьшить все коэффициенты многочлена на 1\n";
@@ -105,28 +111,31 @@ int main()
 			case 7:
 			{
 				List list;
+				
+				Polynom poly;
 				cout << "Введите количество вводимых многочленов >> ";
 				int n;
 				cin >> n;
 				cout << "\nВведите степень многочленов >> ";
 				cin >> degree;
-				polynom.setDegree(degree);
-				system("cls");
+				poly.setDegree(degree);
+
 				for (int i = 0; i < n; i++)
 				{
 					cout << "\n Введите " << i << " многочлен\n";
-					cin >> polynom;
-					list.add(polynom);
+					cin >> poly;
+					list.add(poly);
 					cout << endl;
 				}
-				system("cls");
 				list.show();
-
+				system("pause");
+				//list.show();
+				int k;
 				cout << "Введите дополнительный многочлен\n";
-				cin >> polynom; cout << endl;
+				cin >> poly; cout << endl;
 				cout << "Выберите место вставки >> ";
-				cin >> n;
-				list.addPos(polynom, n);
+				cin >> k;
+				list.addPos(poly, k);
 				cout << endl;
 				list.show();
 
@@ -134,14 +143,14 @@ int main()
 				system("cls");
 
 				cout << "Введите номер элемента который нужно извлечь: \n";
-				cin >> n; cout << endl;
-				list.pop(n);
+				cin >> k; cout << endl;
+				list.pop(k);
 				cout << endl;
 
 
 				cout << "Введите номер элемента который нужно удалить: \n";
-				cin >> n;
-				list.del(n);
+				cin >> k;
+				list.del(k);
 				cout << endl;
 				list.show();
 				

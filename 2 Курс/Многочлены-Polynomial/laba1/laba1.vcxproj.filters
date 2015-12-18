@@ -21,14 +21,27 @@
     <ClCompile Include="Polynom.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Readme.txt">
+    <ClCompile Include="DegreeP.cpp">
       <Filter>Файлы исходного кода</Filter>
-    </Text>
+    </ClCompile>
+    <ClCompile Include="StringP.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Polynom.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="DegreeP.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="StringP.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
