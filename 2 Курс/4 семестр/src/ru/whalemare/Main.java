@@ -30,6 +30,7 @@ public class Main {
         }
 
         System.out.println("Среднее геометрическое = " + getGeometricMean(all, count));
+        in.close();
     }
 
     /**
