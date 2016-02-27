@@ -74,7 +74,7 @@ public class Main {
                 for (int i=0; i<count; i++)
                 {
                     System.out.println();
-                    System.out.print("Введите число " + i + " >> ");
+                    System.out.print("Введите число " + (i+1) + " >> ");
                     int number = in.nextInt();
                     number = getAbs(number);
                     all *= number;
@@ -92,7 +92,8 @@ public class Main {
      * @return int число > 0
      */
     private static int getAbs(int number){
-        return number < 0 ? (number *= -1) : number;
+//        return number < 0 ? (number *= -1) : number;
+        return Math.abs(number);
     }
 
     /**

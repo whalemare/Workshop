@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7eb169f-f5bc-40b2-8232-51e7a5b845ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Отчет 1.docx" afterPath="$PROJECT_DIR$/Отчет 1.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/4 семестр/ru/whalemare/Main.class" afterPath="$PROJECT_DIR$/out/production/4 семестр/ru/whalemare/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/whalemare/Main.java" afterPath="$PROJECT_DIR$/src/ru/whalemare/Main.java" />
     </list>
@@ -29,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/whalemare/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49571183">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.761578">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
                 <element signature="docComment;method#getAbs#0;class#Main#0" expanded="false" />
                 <element signature="docComment;method#getGeometricMean#0;class#Main#0" expanded="false" />
@@ -432,7 +432,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456540948318</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлен общее задание&#10;+ переделан отчет&#10;">
+      <created>1456541445330</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1456541445330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -479,10 +485,14 @@
     <MESSAGE value="Лабораторная #1" />
     <MESSAGE value="Добавлен отчет" />
     <MESSAGE value="Переделан отчет" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделан отчет" />
+    <MESSAGE value="Добавлен общее задание&#10;+ переделан отче" />
+    <MESSAGE value="Добавлен общее задание&#10;+ переделан отчет&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен общее задание&#10;+ переделан отчет&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -517,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/whalemare/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49571183">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.761578">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
           <folding>
             <element signature="docComment;method#getAbs#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#getGeometricMean#0;class#Main#0" expanded="false" />
