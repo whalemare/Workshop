@@ -1,0 +1,6 @@
+﻿  Polynom.cpp
+c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(82): warning C4551: function call missing argument list
+c:\users\nanos\documents\github\proglang.labs\2 курс\многочлены-polynomial\laba1\polynom.cpp(148): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+  Generating Code...
+  laba1.vcxproj -> C:\Users\nanos\Documents\GitHub\ProgLang.labs\2 Курс\Многочлены-Polynomial\Debug\Polynominal.exe
