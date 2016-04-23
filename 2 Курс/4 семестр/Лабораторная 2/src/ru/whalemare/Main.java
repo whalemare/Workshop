@@ -74,14 +74,7 @@ public class Main {
         return position;
     }
 
-    private static int getLeftSum(int array[], int position) {
-        int left = 0;
-        for (int i = 0; i < position; i++)
-            left += array[i];
-        return left;
-    }
-
-    private static int getRightSum(int array[], int position) {
+    public static int getRightSum(int array[], int position) {
         int right = 0;
         for (int i = (position + 1); i < array.length; i++) {
             right += array[i];
